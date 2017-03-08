@@ -1,4 +1,4 @@
-# compiled from from http://mxe.cc/
+# compiled from http://mxe.cc/
 MXE_ROOT=$(HOME)/mxe
 
 GCC=$(MXE_ROOT)/usr/bin/i686-w64-mingw32.static-gcc
