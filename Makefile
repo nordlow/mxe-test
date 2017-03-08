@@ -18,3 +18,5 @@ main: main.cpp Makefile
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@ $<
 test: main
 	wine ./main
+clean:
+	$(RM) main
