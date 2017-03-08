@@ -3,4 +3,4 @@ Test project for M cross environment (MXE)
 
 See http://mxe.cc/
 
-Assumes MXE is cloned to `$HOME/mxe` and built into `$HOME/mxe/usr`.
+Assumes MXE is cloned to `$HOME/mxe` and built there using command `make librsvg`.
