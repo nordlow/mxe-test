@@ -3,7 +3,10 @@
 #include <map>
 #include <set>
 
+extern "C"
+{
 #include <librsvg/rsvg.h>
+}
 
 using std::cout;
 using std::endl;

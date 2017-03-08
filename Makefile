@@ -11,7 +11,7 @@ LIBS_LIBRSVG=$(shell $(PKG_CONFIG) --libs librsvg-2.0)
 CFLAGS=$(CFLAGS_LIBRSVG)
 CXXFLAGS=$(CFLAGS)
 
-LDFLAGS=$(LIBS_LIBRSVG)
+LDFLAGS=$(LIBS_LIBRSVG) -static
 
 all: test
 main: main.cpp Makefile
