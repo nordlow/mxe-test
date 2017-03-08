@@ -3,10 +3,8 @@
 #include <map>
 #include <set>
 
-extern "C"
-{
 #include <librsvg/rsvg.h>
-}
+#include <cairo/cairo.h>
 
 using std::cout;
 using std::endl;
@@ -23,6 +21,9 @@ int main(int argc, const char * argv[], const char * envp[])
     g_type_init();
     handle = rsvg_handle_new();
     g_object_unref(handle);
+
+
+    cout << "cairo_version_string" << cairo_version_string() << endl;
 
     cout << "Hello world!" << endl;
     return 0;
