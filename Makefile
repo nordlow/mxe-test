@@ -8,11 +8,12 @@ PKG_CONFIG=$(MXE_ROOT)/usr/bin/i686-w64-mingw32.static-pkg-config
 CFLAGS=-Wall -Wno-deprecated-declarations $(shell $(PKG_CONFIG) --cflags librsvg-2.0 cairo)
 CXXFLAGS=$(CFLAGS)
 
-LDFLAGS=$(shell $(PKG_CONFIG) --libs librsvg-2.0 cairo) -static
+LDFLAGS=-static
+LIBS=$(shell $(PKG_CONFIG) --libs librsvg-2.0 cairo)
 
 all: test
 main: main.cpp Makefile
-	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@ $<
+	$(CXX) $(CXXFLAGS) $(LDFLAGS) $< $(LIBS) -o $@
 test: main
 	wine ./main
 clean:
