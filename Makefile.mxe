@@ -12,7 +12,7 @@ LDFLAGS=-static
 LIBS=$(shell $(PKG_CONFIG) --libs librsvg-2.0 cairo Qt5Core Qt5Widgets)
 
 all: test
-main: main.cpp Makefile
+main: main.cpp
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) $< $(LIBS) -o $@
 test: main
 	wine ./main
