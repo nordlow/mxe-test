@@ -14,7 +14,7 @@ using std::endl;
 using std::hex;
 using std::dec;
 
-int main(int argc, const char * argv[], const char * envp[])
+int main(int argc, char* const argv[], char* const envp[])
 {
     RsvgHandle* handle;
 
