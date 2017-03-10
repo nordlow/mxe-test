@@ -6,6 +6,8 @@
 #include <librsvg/rsvg.h>
 #include <cairo/cairo.h>
 
+#include <QApplication>
+
 using std::cout;
 using std::endl;
 using std::hex;
@@ -26,5 +28,10 @@ int main(int argc, const char * argv[], const char * envp[])
     cout << "cairo_version_string" << cairo_version_string() << endl;
 
     cout << "Hello world!" << endl;
+
+    QCoreApplication a(argc, const_cast<char**>(argv));
+
+    // return a.exec();
+
     return 0;
 }
