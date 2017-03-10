@@ -32,10 +32,9 @@ int main(int argc, char* const argv[], char* const envp[])
 
     QCoreApplication a(argc, const_cast<char**>(argv));
 
-    QPushButton button ("Hello world !");
-    button.show();
-
-    return a.exec();
+    // QPushButton button ("Hello world !");
+    // button.show();
+    // return a.exec();
 
     return 0;
 }
