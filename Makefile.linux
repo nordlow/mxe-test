@@ -2,7 +2,7 @@ GCC=gcc
 CXX=g++
 PKG_CONFIG=pkg-config
 
-CFLAGS=-Wall -Wno-deprecated-declarations -std=c++17 $(shell $(PKG_CONFIG) --cflags librsvg-2.0 cairo Qt5Core Qt5Widgets)
+CFLAGS=-Wall -Wno-deprecated-declarations -fPIC -std=c++17 $(shell $(PKG_CONFIG) --cflags librsvg-2.0 cairo Qt5Core Qt5Widgets)
 CXXFLAGS=$(CFLAGS)
 
 LDFLAGS=-static
@@ -12,6 +12,6 @@ all: test
 main: main.cpp
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) $< $(LIBS) -o $@
 test: main
-	wine ./main
+	./main
 clean:
 	$(RM) main
