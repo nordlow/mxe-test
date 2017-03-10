@@ -7,6 +7,7 @@
 #include <cairo/cairo.h>
 
 #include <QApplication>
+#include <QPushButton>
 
 using std::cout;
 using std::endl;
@@ -31,7 +32,10 @@ int main(int argc, const char * argv[], const char * envp[])
 
     QCoreApplication a(argc, const_cast<char**>(argv));
 
-    // return a.exec();
+    QPushButton button ("Hello world !");
+    button.show();
+
+    return a.exec();
 
     return 0;
 }
