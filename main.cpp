@@ -28,13 +28,13 @@ int main(int argc, char* const argv[], char* const envp[])
 
     cout << "cairo_version_string" << cairo_version_string() << endl;
 
-    cout << "Hello world!" << endl;
-
     QCoreApplication a(argc, const_cast<char**>(argv));
 
     // QPushButton button ("Hello world !");
     // button.show();
     // return a.exec();
+
+    cout << "All done!" << endl;
 
     return 0;
 }
